@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="asset/style.css">
+  <title>CNM2 - Net Art</title>
+</head>
+
+<body>
+
+    <h1 class="disco">ça déborde !</h1>
+    <h2 class="disco">Le recto verso</h2>
+    <h3 class="disco">Le vice recto</h3>
+    <h4 class="disco">L'envers de l'endroit</h4>
+    <h5 class="disco">L'endroit est-il à l'envers ?</h5>
+    <h6 class="disco">Sens dessus dessous</h6>
+    <p class="disco">ça vous gêne si ça déborde ?</p>
+
+<script>
+  
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+      return color; 
+    }
+
+    const mesTextes = document.querySelectorAll('.disco');
+
+    mesTextes.forEach((texte) => {
+        setInterval(() => {
+          texte.style.color = getRandomColor();
+        }, 100);  
+    });
+
+</script>
+
+</body>
+</html>
